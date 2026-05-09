@@ -5,6 +5,8 @@
     )
 }}
 
+-- just a cmt
+
 select
 
 t.hash,

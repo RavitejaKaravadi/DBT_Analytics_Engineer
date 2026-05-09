@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: dbt_analytics_engineer
+    database: eth
+    schema: eth_schema
+    tables:
+      - name: contracts
+      - name: token_transfers
+      - name: transactions
+      - name: contracts_clone

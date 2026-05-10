@@ -1,7 +1,8 @@
 {{
     config(
         materialized = 'table',
-        tags = ['stable_coin']
+        tags = ['stable_coin'],
+        grants = {'+select': ['TESTER']}
     )
 }}
 

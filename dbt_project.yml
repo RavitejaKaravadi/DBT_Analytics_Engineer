@@ -44,8 +44,14 @@ models:
         - mart_specific
         - mart_view
       +schema: marts
-    # Config indicated by + and applies to all files under models/example/
-
+      stablecoin_activity_per_day:
+        +post-hook:
+          - GRANT USAGE ON DATABASE DBT TO ROLE TESTER
+          - GRANT USAGE ON SCHEMA DBT_KRT_MARTS TO ROLE TESTER
+          - GRANT USAGE ON DATABASE DBT TO ROLE BA
+          - GRANT USAGE ON SCHEMA DBT_KRT_MARTS TO ROLE BA
+      +grants:
+        select: ['BA']
 vars:
   token_name_var: "tron"
   token_address_var: "0x50327c6c5a14DCaDE707ABad2E27eB517df87AB5"

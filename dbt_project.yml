@@ -42,7 +42,7 @@ models:
       +materialized: view
       +tags:
         - mart_specific
-        - mart_view 
+        - mart_view
       +schema: marts
       # analytics:
       #   stablecoin_activity_per_day:

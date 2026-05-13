@@ -1,3 +1,8 @@
+{{
+    config(
+        group = 'fraud_risk',
+        access = 'private')
+}}
 
 select 
 t.from_address,
@@ -13,3 +18,5 @@ where t.transaction_category = 'contract_creation'
 and c.bytecode is not null
 
 group by 1,2
+
+-- 0x0f6666bc699aec39b846e898473e9caec5a6b821

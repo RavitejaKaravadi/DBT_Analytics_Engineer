@@ -1,7 +1,9 @@
 {{
     config(
         materialized='table',
-        tags = ['daily']
+        tags = ['daily'],
+        group = 'analytics_engineering',
+        access = 'private'
     )
 }}
 

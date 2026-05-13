@@ -51,7 +51,7 @@ models:
           - GRANT USAGE ON DATABASE DBT TO ROLE BA
           - GRANT USAGE ON SCHEMA DBT_KRT_MARTS TO ROLE BA
       +grants:
-        select: ['BA']
+        select: ["BA"]
 vars:
   token_name_var: "tron"
   token_address_var: "0x50327c6c5a14DCaDE707ABad2E27eB517df87AB5"
@@ -60,3 +60,5 @@ vars:
 dispatch:
   - macro_namespace: dbt_utils
     search_order: ["dbt_analytics_engineer", "dbt_utils"]
+
+restrict-access: True

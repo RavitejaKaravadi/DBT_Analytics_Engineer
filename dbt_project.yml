@@ -42,16 +42,16 @@ models:
       +materialized: view
       +tags:
         - mart_specific
-        - mart_view
+        - mart_view 
       +schema: marts
-      stablecoin_activity_per_day:
-        +post-hook:
-          - GRANT USAGE ON DATABASE DBT TO ROLE TESTER
-          - GRANT USAGE ON SCHEMA DBT_KRT_MARTS TO ROLE TESTER
-          - GRANT USAGE ON DATABASE DBT TO ROLE BA
-          - GRANT USAGE ON SCHEMA DBT_KRT_MARTS TO ROLE BA
-      +grants:
-        select: ['BA']
+      # analytics:
+      #   stablecoin_activity_per_day:
+      #     +post-hook:
+      #       - "{{ create_latest_version_view() }}"
+      #   - GRANT USAGE ON DATABASE DBT TO ROLE TESTER
+      #   - GRANT USAGE ON SCHEMA DBT_KRT_MARTS TO ROLE TESTER
+      #   - GRANT USAGE ON DATABASE DBT TO ROLE BA
+      #   - GRANT USAGE ON SCHEMA DBT_KRT_MARTS TO ROLE BA
 vars:
   token_name_var: "tron"
   token_address_var: "0x50327c6c5a14DCaDE707ABad2E27eB517df87AB5"

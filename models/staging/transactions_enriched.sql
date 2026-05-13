@@ -5,10 +5,9 @@
     )
 }}
 
--- just a cmt
+
 
 select
-
 t.hash,
 t.block_number,
 t.date,
